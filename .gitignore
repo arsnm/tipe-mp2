@@ -1,0 +1,6 @@
+#system related
+.DS_Store
+
+# python related
+.venv
+pyrightconfig.json
