@@ -1,5 +1,6 @@
 # TIPE : Algorithme de reconnaissance de mouvements (sportifs)
-> en MP* à la Martinière Monplaisir
+
+> en MP\* à la Martinière Monplaisir
 
 ## Projet
 
@@ -8,5 +9,7 @@ des réseaux de neuronnes.
 
 ## Références
 
-- [Introduction to Neural Network](http://3b1b.co/neural-networks), par 3Blue1Brown
-- [Neural Network and Deep Learning](neuralnetworkanddeeplearning.com), par Michael Nielsen  
+- [Introduction to Neural Network](http://3b1b.co/neural-networks),
+  par 3Blue1Brown
+- [Neural Network and Deep Learning](neuralnetworkanddeeplearning.com),
+  par Michael Nielsen
