@@ -1,0 +1,64 @@
+\documentclass[a4paper, 11pt]{article}
+
+\author{Arsène MALLET}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1] {fontenc}
+\usepackage[backend=biber, maxbibnames=5, style=numeric, sorting=none]{biblatex}
+\usepackage{csquotes}
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]
+  {\iffieldundef{prenote}
+     {}
+     {\BibliographyWarning{Ignoring prenote argument}}%
+   \iffieldundef{postnote}
+     {}
+     {\BibliographyWarning{Ignoring postnote argument}}}
+  {\usebibmacro{citeindex}%
+   \textbf{\bibopenbracket\usebibmacro{cite}\bibclosebracket}}
+  {\supercitedelim}
+  {}
+
+\addbibresource{refs.bib}
+
+\let\cite=\supercite
+
+\title{La compression de donn\'ees appliqu\'ee aux images}
+
+\begin{document}
+    
+\begin{center}
+    {\textbf {\LARGE La compression de donn\'ees appliqu\'ee aux images}}
+\end{center}
+
+\vspace{5mm}
+
+
+\section*{Professeur encadrant du candidat}
+Q. Fortier
+
+\section*{Positionnement th\'ematique}
+\begin{itemize}
+    \item INFORMATIQUE(\textit{Informatique Pratique})
+    \item MATHEMATIQUES(\textit{Math\'ematiques Appliqu\'ees})
+\end{itemize}
+
+\section*{Mots-cl\'es}
+
+\begin{tabular}{l l} 
+    (\textit{français}) & (\textit{anglais}) \\ \hline
+     & \\
+    \end{tabular}
+
+\section*{Bibliographie comment\'ee}
+
+
+\section*{Probl\'ematique Retenue}
+
+\section*{Objectif du TIPE}
+\begin{enumerate}
+\end{enumerate}
+
+
+\printbibliography[title=Références bibliographiques]
+\end{document}
