@@ -4,3 +4,7 @@
 # python related
 .venv
 pyrightconfig.json
+
+#tex-related
+.aux
+.synctex.gz
