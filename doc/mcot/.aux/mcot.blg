@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '.aux/mcot.blg'
+[32] biber-darwin:340> INFO - === Mon Jan  8, 2024, 15:10:26
+[41] Biber.pm:419> INFO - Reading '.aux/mcot.bcf'
+[76] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[84] bbl.pm:660> INFO - Writing '.aux/mcot.bbl' with encoding 'UTF-8'
+[84] bbl.pm:763> INFO - Output to .aux/mcot.bbl
+[84] Biber.pm:131> WARN - The file '.aux/mcot.bcf' does not contain any citations!
+[84] Biber.pm:133> INFO - WARNINGS: 1
