@@ -23,13 +23,23 @@
 
 \let\cite=\supercite
 
-\title{}
+\title{Modélisation de vie artificielle à l'aide d'automates cellulaires continues}
 
 \begin{document}
     
 \begin{center}
-    {\textbf {}}
+{\textbf {Modélisation de vie artificielle à l'aide d'automates cellulaires continues}}
 \end{center}
+
+Lorsque j'étais plus jeune, je m'étais amusé à jouer au "Jeu de la Vie", une simulation
+de cellules facile à prendre en main, mais aux possibilités gigantesques. Il m'a donc
+paru intéressant de pousser les recherches sur la vie artificielle et les automates
+cellulaires.
+
+Bien qu'il n'y est pas de "joueur" à proprement parler dans ce type de simulation, 
+l'étude des paramètres de simulation permettant l'observation de phénomènes intéressant
+est une tâche complexe qui peut être considéré comme un jeu. C'est dans ce cadre que 
+s'inscrit mon TIPE dans le thème de l'année.
 
 \vspace{5mm}
 
@@ -46,18 +56,49 @@ Q. Fortier
 
 \begin{tabular}{l l} 
     (\textit{français}) & (\textit{anglais}) \\ \hline
-     & \\
+    Automate Cellulaire & Cellular Automaton \\
+    Vie artificielle & Artificial Life \\
+    Sensorimoteur & Sensorimotor \\
+    Apprentissage Automatique & Machine Learning \\
+    Fonction de Croissance & Growth Mapping \\
+    Noyau (convolutif) & Kernel \\ \hline
     \end{tabular}
 
 \section*{Bibliographie comment\'ee}
 
+La vie artificielle est un domaine de recherche faisant appele à des notions 
+mathématiques, informatique et biologique. En s'inspirant de systèmes vivants, la
+recherche sur la vie artificielle est divisé en trois axes \cite{artLife}. La ALife
+(artifical life / vie artificielle) "soft", qui consiste en la simulation de
+comportements semblables à ceux de la vie ; l'axe "hard" qui produit quant à elle des
+objets matérielles, et enfin la ALife "wet", qui synthétise des systèmes vivants à
+partir de substances biochimiques.
+
+Lorsqu'il est question de vie artificielle "soft", ce sur quoi nous allons nous
+focaliser, il existe encore divers sous-branches, comme par exemple les réseaux de
+neuronnes, ou les automates cellulaires.
+
+L'automate cellulaire le plus connu est surement le "Jeu de la vie", mis au point par
+le mathématicien anglais Jonh Conway en 1970. C'est un jeu a zero joueur, il est appelé
+ainsi car il n'est défini que par son était initial, fixé par le joueur, qui
+n'intervient plus par la suite. 50 ans plus tard, en 2019, le
 
 
 \section*{Probl\'ematique Retenue}
 
+Comment optimiser les attributs d'automates cellulaires continues afin de créer des
+structures au comportement macroscopiques remarquables ?
 
 \section*{Objectif du TIPE}
 
+\begin{enumerate}
+    \item Implémentation d'une simulation de vie artificielle au moyen d'automates
+        cellulaires continues
+    \item Recherche de paramètres permettant des comportement macroscopiques
+        remarquables
+    \item Comparaison du comportement du modèle avec des phénomènes observables dans le
+        réel
+\end{enumerate}
 
 \printbibliography[title=Références bibliographiques] \end{document}
 \end{document}
