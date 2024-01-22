@@ -66,22 +66,48 @@ Q. Fortier
 
 \section*{Bibliographie comment\'ee}
 
-La vie artificielle est un domaine de recherche faisant appele à des notions 
-mathématiques, informatique et biologique. En s'inspirant de systèmes vivants, la
-recherche sur la vie artificielle est divisé en trois axes \cite{artLife}. La ALife
-(artifical life / vie artificielle) "soft", qui consiste en la simulation de
-comportements semblables à ceux de la vie ; l'axe "hard" qui produit quant à elle des
+La vie artificielle est un domaine de recherche faisant appel à des notions 
+mathématiques, informatiques et biologiques. En s'inspirant de systèmes vivants, la
+recherche sur la vie artificielle est divisée en trois axes \cite{BEDAU2003505}. La 
+ALife (A[rtificial ]Life) "soft", qui consiste en la simulation informatique de
+comportements semblables à ceux de la vie ; l'axe "hard" qui produit quant à lui des
 objets matérielles, et enfin la ALife "wet", qui synthétise des systèmes vivants à
 partir de substances biochimiques.
 
 Lorsqu'il est question de vie artificielle "soft", ce sur quoi nous allons nous
 focaliser, il existe encore divers sous-branches, comme par exemple les réseaux de
-neuronnes, ou les automates cellulaires.
+neuronnes, les algorithmes génétiques ou les automates cellulaires 
+\cite{komosinski2009artificial}.
 
 L'automate cellulaire le plus connu est surement le "Jeu de la vie", mis au point par
-le mathématicien anglais Jonh Conway en 1970. C'est un jeu a zero joueur, il est appelé
-ainsi car il n'est défini que par son était initial, fixé par le joueur, qui
-n'intervient plus par la suite. 50 ans plus tard, en 2019, le
+le mathématicien anglais Jonh Conway en 1970 \cite{izhikevich2015game}. C'est un jeu à
+zéro joueur, il est appelé ainsi car il n'est défini que par son état initial, fixé par
+le joueur (joueur qui n'intervient plus par la suite). Ce jeu consiste en la vie de 
+cellules sur une grille, qui naissent, meurent et survivent en fonction des cellules 
+vivantes de leur voisinnage.
+50 ans plus tard, en 2019, le chercheur B. W. Chan publie une généralisation continue du
+modèle discret de Conway, qu'il nomme Lenia \cite{Chan_2019}.
+
+Cette généralisation fait appel à des noyaux convolutifs et des fonctions de croissance
+\cite{Chan_2019}, permettant, tout comme le Jeu de la Vie, de connaître l'évolution des
+cellules au cours du temps et de l'espace.
+
+Mais les configurations initiales de Lenia sont infinies, ainsi il convient de les
+choisir au mieux si l'on veut observer des phénomènes remarquables. Mais comment bien
+choisir ces attributs ? C'est ici que l'apprentissage automatique s'avert utile.
+Par des moyens de machine learning, il est possible de chercher des configurations
+stables, résistantes à certaines perturbations, capablent de sortir d'un labyrinthe, ou
+encore de se déplacer vers des zones plus favorables à la survie des cellules 
+\cite{hamon:hal-03519319} \cite{plantec2023flowlenia}.
+
+Il est également possible de faire des analogies entre notre système de cellules et un
+réseau de neuronnes, permettant ainsi d'appliquer des algorithmes de rétro-propagation,
+qui permettent d'orienter nos cellules vers le comportement souhaité 
+\cite{hamon:hal-03519319}.
+
+Finalement, les méthodes permettant l'observation de phénomènes macroscopiques
+remarquables à partir de règles élémentaires sont nombreuses, il conviendra donc
+d'explorer ces différentes voies afin de simuler une forme de vie grâce à ce modèle.
 
 
 \section*{Probl\'ematique Retenue}
@@ -91,14 +117,14 @@ structures au comportement macroscopiques remarquables ?
 
 \section*{Objectif du TIPE}
 
-\begin{enumerate}
+\begin{itemize}
     \item Implémentation d'une simulation de vie artificielle au moyen d'automates
         cellulaires continues
     \item Recherche de paramètres permettant des comportement macroscopiques
         remarquables
-    \item Comparaison du comportement du modèle avec des phénomènes observables dans le
-        réel
-\end{enumerate}
+    \item Chercher à combiner les stuctures afin d'obtenir une certaine forme de
+        groupement de cellules intelligente ou adaptative.
+\end{itemize}
 
 \printbibliography[title=Références bibliographiques] \end{document}
 \end{document}
