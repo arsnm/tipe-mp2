@@ -5,7 +5,7 @@
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1] {fontenc}
-\usepackage[backend=biber, maxbibnames=5, style=numeric, sorting=none]{biblatex}
+\usepackage[backend=biber, maxbibnames=6, style=numeric, sorting=none]{biblatex}
 \usepackage{csquotes}
 \DeclareCiteCommand{\supercite}[\mkbibsuperscript]
   {\iffieldundef{prenote}
@@ -23,23 +23,22 @@
 
 \let\cite=\supercite
 
-\title{Modélisation de vie artificielle à l'aide d'automates cellulaires continues}
+\title{Modélisation de vie artificielle à l'aide d'automates cellulaires continus}
 
 \begin{document}
     
 \begin{center}
-{\textbf {Modélisation de vie artificielle à l'aide d'automates cellulaires continues}}
+{\textbf {Modélisation de vie artificielle à l'aide d'automates cellulaires continus.}}
 \end{center}
 
-Lorsque j'étais plus jeune, je m'étais amusé à jouer au "Jeu de la Vie", une simulation
-de cellules facile à prendre en main, mais aux possibilités gigantesques. Il m'a donc
-paru intéressant de pousser les recherches sur la vie artificielle et les automates
-cellulaires.
+Le "Jeu de la vie" est une simulation de cellules dont les règles sont simples, mais 
+les possibilités gigantesques. Ayant joué à ce jeu plus jeune, il m'a paru intéressant
+de pousser les recherches sur la vie artificielle et les automates cellulaires.
 
-Bien qu'il n'y est pas de "joueur" à proprement parler dans ce type de simulation, 
-l'étude des paramètres de simulation permettant l'observation de phénomènes intéressant
-est une tâche complexe qui peut être considéré comme un jeu. C'est dans ce cadre que 
-s'inscrit mon TIPE dans le thème de l'année.
+Bien qu'il n'y ait pas de "joueur" à proprement parler dans ce type de simulation,
+l'étude des paramètres de simulation permettant l'observation de phénomènes intéressants
+est une tâche complexe qui peut être considérée comme un jeu. C'est dans ce cadre que 
+mon TIPE s'inscrit dans le thème de l'année.
 
 \vspace{5mm}
 
@@ -66,65 +65,67 @@ Q. Fortier
 
 \section*{Bibliographie comment\'ee}
 
-La vie artificielle est un domaine de recherche faisant appel à des notions 
-mathématiques, informatiques et biologiques. En s'inspirant de systèmes vivants, la
-recherche sur la vie artificielle est divisée en trois axes \cite{BEDAU2003505}. La 
-ALife (A[rtificial ]Life) "soft", qui consiste en la simulation informatique de
-comportements semblables à ceux de la vie ; l'axe "hard" qui produit quant à lui des
-objets matérielles, et enfin la ALife "wet", qui synthétise des systèmes vivants à
-partir de substances biochimiques.
+La vie artificielle est un domaine de recherche qui fait appel à des notions
+mathématiques, informatiques et biologiques. En s’inspirant de systèmes vivants, la 
+recherche sur la vie artificielle est divisée en trois axes \cite{BEDAU2003505}. 
+La ALife (A[rtificial ]Life) "soft" , qui consiste en la simulation informatique de 
+comportements semblables à ceux de la vie ; l’axe "hard" qui produit quant à lui des 
+objets matériels, et enfin la ALife "wet", qui synthétise des systèmes vivants à partir
+de substances biochimiques.
 
-Lorsqu'il est question de vie artificielle "soft", ce sur quoi nous allons nous
-focaliser, il existe encore divers sous-branches, comme par exemple les réseaux de
-neuronnes, les algorithmes génétiques ou les automates cellulaires 
-\cite{komosinski2009artificial}.
+Lorsqu’il est question de vie artificielle "soft", ce sur quoi nous allons nous 
+focaliser, il existe encore diverses sous-branches, comme par exemple les réseaux de 
+neurones, les algorithmes génétiques ou les automates 
+cellulaires \cite{komosinski2009artificial}.
 
-L'automate cellulaire le plus connu est surement le "Jeu de la vie", mis au point par
-le mathématicien anglais Jonh Conway en 1970 \cite{izhikevich2015game}. C'est un jeu à
-zéro joueur, il est appelé ainsi car il n'est défini que par son état initial, fixé par
-le joueur (joueur qui n'intervient plus par la suite). Ce jeu consiste en la vie de 
+L’automate cellulaire le plus connu est sûrement le "Jeu de la vie", mis au point par 
+le mathématicien anglais Jonh Conway en 1970 \cite{izhikevich2015game}. C’est un jeu à 
+zéro joueur, catégorisé ainsi car il n’est défini que par son état initial, fixé par le
+joueur (joueur qui n’intervient plus par la suite). Ce jeu consiste en la vie de 
 cellules sur une grille, qui naissent, meurent et survivent en fonction des cellules 
-vivantes de leur voisinnage.
-50 ans plus tard, en 2019, le chercheur B. W. Chan publie une généralisation continue du
-modèle discret de Conway, qu'il nomme Lenia \cite{Chan_2019}.
+vivantes de leur voisinage. 50 ans plus tard, en 2019, le chercheur B. W. Chan publie 
+une généralisation continue du modèle discret de Conway, qu’il nomme
+Lenia \cite{Chan_2019}.
 
-Cette généralisation fait appel à des noyaux convolutifs et des fonctions de croissance
-\cite{Chan_2019}, permettant, tout comme le Jeu de la Vie, de connaître l'évolution des
-cellules au cours du temps et de l'espace.
+Cette généralisation fait appel à des noyaux convolutifs et des fonctions de 
+croissance \cite{Chan_2019} permettant, tout comme le Jeu de la Vie, de connaître 
+l’évolution des cellules au cours du temps et de l’espace.
 
-Mais les configurations initiales de Lenia sont infinies, ainsi il convient de les
-choisir au mieux si l'on veut observer des phénomènes remarquables. Mais comment bien
-choisir ces attributs ? C'est ici que l'apprentissage automatique s'avert utile.
-Par des moyens de machine learning, il est possible de chercher des configurations
-stables, résistantes à certaines perturbations, capablent de sortir d'un labyrinthe, ou
-encore de se déplacer vers des zones plus favorables à la survie des cellules 
+Mais les configurations initiales de Lenia sont infinies, ainsi il convient de les 
+choisir au mieux si l’on veut observer des phénomènes remarquables. Mais comment bien 
+choisir ces attributs ? C’est ici que l’apprentissage automatique s’avère utile. Par 
+des moyens de machine learning, il est possible de chercher des configurations stables,
+résistantes à certaines perturbations, capables de sortir d’un labyrinthe, ou encore de
+se déplacer vers des zones plus favorables à la survie des cellules 
 \cite{hamon:hal-03519319} \cite{plantec2023flowlenia}.
 
 Il est également possible de faire des analogies entre notre système de cellules et un
-réseau de neuronnes, permettant ainsi d'appliquer des algorithmes de rétro-propagation,
-qui permettent d'orienter nos cellules vers le comportement souhaité 
+réseau de neurones, permettant ainsi d’appliquer des algorithmes de rétro-propagation,
+qui vont d’orienter nos cellules vers le comportement souhaité
 \cite{hamon:hal-03519319}.
 
-Finalement, les méthodes permettant l'observation de phénomènes macroscopiques
+Finalement, les méthodes permettant l’observation de phénomènes macroscopiques
 remarquables à partir de règles élémentaires sont nombreuses, il conviendra donc
-d'explorer ces différentes voies afin de simuler une forme de vie grâce à ce modèle.
-
+d’explorer ces différentes voies afin de simuler une forme de vie grâce à ce modèle.
 
 \section*{Probl\'ematique Retenue}
 
-Comment optimiser les attributs d'automates cellulaires continues afin de créer des
-structures au comportement macroscopiques remarquables ?
+Comment optimiser les attributs d’automates cellulaires continus afin de créer des
+structures aux comportements macroscopiques remarquables ?
 
 \section*{Objectif du TIPE}
 
 \begin{itemize}
-    \item Implémentation d'une simulation de vie artificielle au moyen d'automates
-        cellulaires continues
-    \item Recherche de paramètres permettant des comportement macroscopiques
+    \item Implémenter une simulation de vie artificielle au moyen d’automates
+        cellulaires continus
+
+    \item Chercher des paramètres permettant des comportements macroscopiques 
         remarquables
-    \item Chercher à combiner les stuctures afin d'obtenir une certaine forme de
-        groupement de cellules intelligente ou adaptative.
+
+    \item Chercher à combiner les stuctures afin d’obtenir des groupements cellulaires
+        intelligents et/ou adaptatifs.
 \end{itemize}
 
-\printbibliography[title=Références bibliographiques] \end{document}
+\printbibliography[title=Références bibliographiques]
+
 \end{document}
