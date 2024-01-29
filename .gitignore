@@ -1,10 +1,14 @@
 #system related
 .DS_Store
 
-# python related
+#python related
 .venv
 pyrightconfig.json
 
-#tex-related
+#tex related
 .aux
 .synctex.gz
+
+#tests and examples
+examples
+test
