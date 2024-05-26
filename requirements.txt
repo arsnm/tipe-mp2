@@ -1,2 +1,7 @@
+torchvision==0.15.2
+addict
 numpy
 Pygments
+matplotlib
+scipy
+jupyter

@@ -4,11 +4,17 @@
 #python related
 .venv
 pyrightconfig.json
+__pycache__
+.ipynb_checkpoints
 
 #tex related
 .aux
-.synctex.gz
+*.synctex.gz
 
 #tests and examples
 examples
 test
+simul
+
+#archive
+.archive
