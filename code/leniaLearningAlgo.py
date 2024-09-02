@@ -1,3 +1,4 @@
+# !! This code is taken from https://developmentalsystems.org/sensorimotor-lenia/, it has only been slightly modified
 # Utils
 
 import numbers
