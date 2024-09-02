@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage{geometry}
+
+% Define custom colors
+\definecolor{keywordcolor}{rgb}{0,0,0.6}
+\definecolor{commentcolor}{rgb}{0.5,0.5,0.5}
+\definecolor{stringcolor}{rgb}{0.6,0,0}
+\definecolor{numbercolor}{rgb}{0.5,0.5,0.5}
+
+% Setup for algorithmicx
+\algrenewcommand\algorithmicindent{1.0em}%
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Transformée de Fourier Rapide (FFT)}
+\begin{algorithmic}[1]
+\Function{FFT}{$x$}
+    \State $N \gets \text{longueur de } x$
+    \If{$N = 1$}
+        \State \Return $x$
+    \EndIf
+    \State $\omega \gets e^{-2\pi i / N}$
+    \State $x_{\text{pair}} \gets x[0], x[2], x[4], \ldots, x[N-2]$
+    \State $x_{\text{impair}} \gets x[1], x[3], x[5], \ldots, x[N-1]$
+    \State $X_{\text{pair}} \gets \text{FFT}(x_{\text{pair}})$
+    \State $X_{\text{impair}} \gets \text{FFT}(x_{\text{impair}})$
+    \State $X \gets \text{vecteur de longueur } N$
+    \For{$k = 0$ to $N/2 - 1$}
+        \State $X[k] \gets X_{\text{pair}}[k] + \omega^k \cdot X_{\text{impair}}[k]$
+        \State $X[k + N/2] \gets X_{\text{pair}}[k] - \omega^k \cdot X_{\text{impair}}[k]$
+    \EndFor
+    \State \Return $X$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
